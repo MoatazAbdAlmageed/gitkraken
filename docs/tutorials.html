@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<title>Git Tutorials | Learn Git</title>
+<meta property="og:title" content="Git Tutorials | Learn Git">
+<link rel="canonical" href="https://www.gitkraken.com/learn/git/tutorials">
+<meta property="og:url" content="https://www.gitkraken.com/learn/git/tutorials">
+<meta name="description" content="Learn Git with these Git tutorials on beginner, intermediate and advanced Git topics.">
+<meta property="og:description" content="Learn Git with these Git tutorials on beginner, intermediate and advanced Git topics.">
+<meta property="og:image" content="https://www.gitkraken.com/img/og/og-git-tutorials.png">
+<meta name="twitter:image" content="https://www.gitkraken.com/img/og/og-git-tutorials.png">
+<script>!function(n){n.env="PRODUCTION"}(window)</script><script>var root=document.getElementsByTagName("html")[0];root.className+="js",document.domain="gitkraken.com"</script>
+<script type="text/javascript">setTimeout(function(){var e=document.createElement("script"),t=document.getElementsByTagName("script")[0];e.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0010/7418.js?"+Math.floor((new Date).getTime()/36e5),e.async=!0,e.type="text/javascript",t.parentNode.insertBefore(e,t)},1)</script><link rel="stylesheet" href="/css/styles.css?v=20210519">
+<link href="humans.txt" rel="author">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GitKraken.com">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:site" content="@gitkraken">
+<link href="https://plus.google.com/+Axosoft" rel="publisher">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#149287">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#149287">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body lang="en" class="transparent-header" id="git-glossary">
+<nav class="site-header">
+<div class="site-header__container header-sticky" style="background-color: rgba(20,20,34,1)">
+<a href="/" class="header-logo__image gitkraken">
+<span>Axosoft GitKraken</span>
+</a>
+<ul class="site-header__links mobile">
+<span class="mobile-nav-button">
+<span>Toggle Menu</span>
+</span>
+</ul>
+<ul class="site-header__links desktop">
+<li class="dropdown">
+<div class="dropdown-link header-link">Products &nbsp;<i class="fa fa-caret-down"></i></div>
+<div class="dropdown-content">
+<a href="/git-client" class="header-link">GitKraken</a>
+<a href="/boards" class="header-link">GitKraken Boards</a>
+<a href="/timelines" class="header-link">GitKraken Timelines</a>
+</div>
+</li>
+<li><a href="/pricing" class="header-link">Pricing</a></li>
+<li class="dropdown">
+<div class="dropdown-link header-link">Learn &nbsp;<i class="fa fa-caret-down"></i></div>
+<div class="dropdown-content mega mega-wrap">
+<div class="mega-content">
+<div class="flex-grid pbs">
+<div class="flex-item">
+<ul>
+<li><p class="header-link gold mega-title mts"><strong>Learn Git</strong></p></li>
+<li><a href="/learn/git#git-concepts" class="header-link"><img src="/img/menu/menu-concepts.svg" class="menu-icon"> &nbsp;Concepts</a></li>
+<li><a href="/learn/git/tutorials" class="header-link"><img src="/img/menu/menu-tutorials.svg" class="menu-icon"> &nbsp;Tutorials</a></li>
+<li><a href="/learn/git/best-practices" class="header-link"><img src="/img/menu/menu-best-practices.svg" class="menu-icon"> &nbsp;Best Practices</a></li>
+<li><a href="/learn/git/commands" class="header-link"><img src="/img/menu/menu-commands.svg" class="menu-icon"> &nbsp;Commands</a></li>
+<li><a href="/learn/git/definitions" class="header-link"><img src="/img/menu/menu-definitions.svg" class="menu-icon"> &nbsp;Definitions</a></li>
+<li><a href="/learn/git/problems" class="header-link"><img src="/img/menu/menu-problems.svg" class="menu-icon"> &nbsp;Problems & Solutions</a></li>
+<li>&nbsp;</li>
+</ul>
+</div>
+<div class="flex-item">
+<ul>
+<li><p class="gold header-link mega-title mts"><strong>Education Resources</strong></p></li>
+<li><a href="/student-resources" class="header-link"><img src="/img/menu/menu-students.svg" class="menu-icon"> &nbsp;Student Resources</a></li>
+<li><a href="/teacher-resources" class="header-link"><img src="/img/menu/menu-education.svg" class="menu-icon"> &nbsp;Educator Resources</a></li>
+<li><a href="/resources/git-workshop" class="header-link"><img src="/img/menu/menu-workshop.svg" class="menu-icon"> &nbsp;Host a Git Workshop</a></li>
+<li><p class="gold header-link mega-title"><strong>Industry Reports</strong></p></li>
+<li><a href="/reports/best-developer-tools-2021" class="header-link"><img src="/img/menu/menu-tools.svg" class="menu-icon"> &nbsp;Top Dev Tools 2021</a></li>
+<li><a href="/reports/devops-report-2020" class="header-link"><img src="/img/menu/menu-dev-ops-report.svg" class="menu-icon"> &nbsp;DevOps Report 2020</a></li>
+</ul>
+</div>
+</div>
+<hr>
+<p class="gold header-link mega-title pbs" style="padding-left: 39px"><strong>Getting Started with GitKraken</strong></p>
+<div class="flex-grid pbm">
+<div class="flex-item ptz">
+<ul>
+<li><a href="/integrations/github" class="header-link"><img src="/img/menu/menu-github.svg" class="menu-icon"> &nbsp;GitHub Integration</a></li>
+<li><a href="/integrations/gitlab" class="header-link"><img src="/img/menu/menu-gitlab.svg" class="menu-icon"> &nbsp;GitLab Integration</a></li>
+<li><a href="/integrations/bitbucket" class="header-link"><img src="/img/menu/menu-bitbucket.svg" class="menu-icon"> &nbsp;Bitbucket Integration</a></li>
+<li><a href="/integrations/azure-devops" class="header-link"><img src="/img/menu/menu-azure.svg" class="menu-icon"> &nbsp;Azure DevOps Integration</a></li>
+</ul>
+</div>
+<div class="flex-item ptz">
+<ul>
+<li><a href="/downloads/gitkraken-git-gui-cheat-sheet.pdf" target="_blank" class="header-link"><img src="/img/menu/menu-cheat-sheet.svg" class="menu-icon"> &nbsp;GitKraken Cheat Sheet</a></li>
+<li><a href="/downloads/why-gitkraken.pdf" target="_blank" class="header-link"><img src="/img/menu/menu-gk.svg" class="menu-icon"> &nbsp;Why GitKraken</a></li>
+<li><a href="https://support.gitkraken.com/" target="_blank" class="header-link"><img src="/img/menu/menu-support.svg" class="menu-icon"> &nbsp;Support Documentation</a></li>
+<li><a href="" class="header-link">&nbsp;</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown">
+<div class="dropdown-link header-link">My Account &nbsp;<i class="fa fa-caret-down"></i></div>
+<div class="dropdown-content">
+<a id="account-sign-in" href="https://app.gitkraken.com/" target="_blank" rel="noopener" class="header-link">Manage Subscriptions</a>
+<a id="glo-sign-in" class="header-link" href="https://app.gitkraken.com/glo/" target="_blank" rel="noopener">GitKraken Boards Sign In</a>
+<a id="timelines-sign-in" class="header-link" href="https://timelines.gitkraken.com/" target="_blank" rel="noopener">GitKraken Timelines Sign In</a>
+</div>
+</li>
+<li><a href="/download" class="button button--basic button--basic-suite-gui" data-button="nav-header">Download GitKraken Free</a></li>
+</ul>
+</div>
+</nav>
+<div class="mobile-nav">
+<ul class="nav-list">
+<li class="nav-list__header">GitKraken</li>
+<li><a href="/git-client">GitKraken</a></li>
+<li><a href="/boards">GitKraken Boards</a></li>
+<li><a href="/timelines">GitKraken Timelines</a></li>
+<li><a href="/pricing">Pricing</a></li>
+<li><a href="/customers" class="header-link">Why GitKraken</a></li>
+<li><a href="/learn/git" class="header-link">Learn Git</a></li>
+<li><a id="account-sign-in" a href="https://app.gitkraken.com/" target="_blank" rel="noopener" class="header-link">My Account</a></li>
+<li><a id="glo-sign-in" class="header-link" href="https://app.gitkraken.com/glo/" target="_blank" rel="noopener">GitKraken Boards Sign In</a></li>
+<li><a id="timelines-sign-in" class="header-link" href="https://timelines.gitkraken.com/" target="_blank" rel="noopener">GitKraken Timelines Sign In</a></li>
+<li><a href="/download">Downloads</a></li>
+</ul>
+</div>
+<div class="ptz">
+<header class="hero center">
+<div class="narrow mtz ptz">
+<h1 class="mtz cream">Git Tutorials</h1>
+<h3 class="mtz grey">Instructional Training Videos</h3>
+<img src="/img/landing-page/git-tutorials-keif.svg" class="hero-keif git-tutorials">
+</div>
+</header>
+<div class="ptz tutorials-page" id="learn-git">
+<div class="ptz page-wrapper">
+<p class="narrow pbm center container">Jump in and learn Git based on your knowledge level. These beginner, intermediate, and advanced Git tutorials break down concepts into short videos that will teach you the concept and then walk through an example of how to apply it.</p>
+<div class="center tut-levels">
+<nav class="tut-level-menu">
+<a href="#beginner" class="active"><p class="mtz">Beginner Videos</p></a>
+<a href="#intermediate"><p class="mtz">Intermediate Videos</p></a>
+<a href="#advanced"><p class="mtz">Advanced Videos</p></a>
+</nav>
+</div>
+<section class="pbm mbs pts" id="beginner" style="background-color: #192E37">
+<div class="ptz container">
+<div class="narrow center">
+<span id="git-repo"></span>
+<h1 class="cream ptxs pbxs mts">Beginner Git Tutorials</h1>
+<div id="what-is-a-git-repository" class="anchor"></div>
+<div class="flex-grid video-grid mtm">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/what-is-a-git-repository">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/git-repository.jpg" alt="Learning Git with GitKraken - What is a Git Repository thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>What is a Git repository?</strong></p>
+<span id="remote-repo"></span>
+<p class="mts">Learn how to initialize Git on a project to create a new Git repo and what happens when you delete a Git repository.</p>
+</div>
+</div>
+<div id="what-is-a-commit" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/what-is-git-commit">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/commit.jpg" alt="Learning Git with GitKraken - What is a Commit thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>What is a Git commit?</strong></p>
+<p class="mts">Learn what a Git commit is and how commits work to visualize the history of your Git repository, and see how committing fits into a typical Git workflow.</p>
+</div>
+</div>
+<div id="how-to-git-commit" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/how-to-git-commit">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/how-to-commit.jpg" alt="Learning Git with GitKraken - How to Git Commit thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How to Git Commit</strong></p>
+<p class="mts">Learn how to perform the git commit command, including how to add a Git commit message, how to amend a commit, and how to revert a commit with GitKraken.</p>
+</div>
+</div>
+<div id="what-is-a-remote-repository" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/what-is-git-remote">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/remote-repository.jpg" alt="What is a Remote Repository thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>What is a Git remote?</strong></p>
+<span id="ssh"></span>
+<p class="mts">Learn what a Git remote is, how to clone a Git remote to collaborate with team members, and how to add a remote to your project in Git.</p>
+</div>
+</div>
+<div id="how-to-git-branch" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/how-to-git-branch">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/branch.jpg" alt="Learning Git with GitKraken - How to Git Branch thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How to Git Branch</strong></p>
+<p class="mts">Watch this beginner Git tutorial video to learn more about branching in Git, how to delete a Git branch, how to create & rename a Git branch, & switch a Git branch.</p>
+</div>
+</div>
+<div id="how-to-create-git-branch" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/problems/create-git-branch#how-to-create-git-branch">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/create-branch.jpg" alt="How to create a Git Branch thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How to Create a Git Branch</strong></p>
+<p class="mts">Watch this beginner Git tutorial video to learn how to create a Git branch. See how to create a branch and checkout the new branch using the same command.</p>
+</div>
+</div>
+<div id="how-to-delete-git-branch" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/delete-git-branch">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/delete-branch.jpg" alt="How to delete a Git Branch thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How to Delete a Git Branch</strong></p>
+<p class="mts">Watch this beginner Git tutorial video to learn how to delete a branch. See commands for how to delete a Git branch locally and how to delete a remote branch.</p>
+</div>
+</div>
+<div id="how-to-rename-git-branch" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/problems/rename-git-branch#how-to-rename-git-branch">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/rename-branch.jpg" alt="How to rename a Git Branch thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How to Rename a Git Branch</strong></p>
+<p class="mts">Watch this beginner Git tutorial video to learn how to rename a Git branch. Learn how to rename a Git branch locally and how to rename a remote branch.</p>
+</div>
+</div>
+<div id="what-is-ssh" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/how-git-ssh-works">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/ssh.jpg" alt="Learning Git with GitKraken - What is SSH thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How Git SSH Works</strong></p>
+<p class="mts">How does Secure Shell work in Git? What are SSH keys? Learn how to use an SSH agent to communicate with an SSH server on your computer’s behalf.</p>
+</div>
+</div>
+<div id="what-is-a-diff" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/what-is-a-diff">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/diff.jpg" alt="Learning Git with GitKraken - What is a Diff thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How Git Diff Works</strong></p>
+<p class="mts">What are Git diffs? Learn how to view the diff between multiple commits, how to view the diff between multiple branches, and how diff text works in Git.</p>
+</div>
+</div>
+<div id="what-is-git-checkout" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/what-is-git-checkout">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/git-checkout.jpg" alt="Learning Git with GitKraken - What is Git Checkout thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>What is Git Checkout?</strong></p>
+<p class="mts">Learn more about this action and how to checkout branches, commits, and tags, then see an example of using Git checkout in GitKraken and the command line.</p>
+</div>
+</div>
+<div id="what-is-git-clone" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/what-is-git-clone">
+<div class="green-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/git-clone.jpg" alt="Learning Git with GitKraken - What is Git Clone thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>What is Git Clone?</strong></p>
+<p class="mts">How do you clone a remote repository? Learn what a Git clone is and how to use the Git clone command to create a copy of your remote on your local machine.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pbm mbs pts" id="intermediate" style="background-color: #17263A">
+<div class="ptz container">
+<div class="narrow center">
+<span id="merging-vs-rebasing"></span>
+<h1 class="cream ptxs pbxs mts">Intermediate Git Tutorials</h1>
+<div id="how-to-git-merge" class="anchor"></div>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/how-to-git-merge">
+<div class="blue-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/intermediate/git-merge.jpg" alt="Learning Git with GitKraken - How to Git Merge thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How to Git Merge</strong></p>
+<p class="mts">Learn how to use the Git merge command to combine changes from one branch to another branch in the command line, and see how to resolve a Git merge conflict with GitKraken.</p>
+</div>
+</div>
+<hr>
+<div id="what-is-stashing-in-git" class="anchor"></div>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/how-to-git-stash">
+<div class="blue-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/beginner/stashing.jpg" alt="Learning Git with GitKraken - What is Stashing thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How to Git Stash</strong></p>
+<p class="mts">What is stashing in Git? How do you create a Git stash? How do you apply a Git stash? How do you pop a Git stash? Learn how to stash file changes in Git.</p>
+</div>
+</div>
+<hr>
+<div id="what-are-git-hooks" class="anchor"></div>
+<div class="flex-grid video-grid mtm">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/how-to-create-git-hooks">
+<div class="blue-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/intermediate/git-hooks.jpg" alt="Learning Git with GitKraken - What are Git Hooks thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How to Create Git Hooks</strong></p>
+<span id="squash-commits"></span>
+<p class="mts">What are Git hooks? How do you access your .git/hooks folder? Learn how to set up Git hooks to run shell scripts that trigger after Git actions are performed.</p>
+</div>
+</div>
+<div id="how-to-squash-commits" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/what-is-git-squash">
+<div class="blue-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/intermediate/squash.jpg" alt="Learning Git with GitKraken - How to Squash Commits thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How to Git Squash</strong></p>
+<span id="pull-request"></span>
+<p class="mts">How does Git squash work? Can you squash 2 commits? Learn how to use this command to squash commits in Git to clean up your repo history.</p>
+</div>
+</div>
+<div id="what-is-a-pull-request" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/what-is-a-pull-request-in-git">
+<div class="blue-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/intermediate/pull-request.jpg" alt="Learning Git with GitKraken - What is a PR thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>What is a Pull Request in Git?</strong></p>
+<span id="cherry-pick"></span>
+<p class="mts">What is a pull request? What is a pull request in GitHub? Learn how pull requests work in Git and see an example of opening a pull request in GitHub.</p>
+</div>
+</div>
+<div id="what-is-a-cherry-pick" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/how-to-cherry-pick-git">
+<div class="blue-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/intermediate/cherry-pick.jpg" alt="Learning Git with GitKraken - How to Cherry Pick thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How to Git Cherry Pick</strong></p>
+<span id="rebase-part-one"></span>
+<p class="mts">Watch this intermediate Git tutorial video to learn how to cherry pick a commit, and see an example of cherry picking in the GitKraken Git GUI.</p>
+</div>
+</div>
+<div id="what-is-git-rebase" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/what-is-git-rebase">
+<div class="blue-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/intermediate/git-rebase.jpg" alt="Learning Git with GitKraken - What is Git Rebase thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>What is Git Rebase?</strong></p>
+<span id="rebase-part-one"></span>
+<p class="mts">Learn how to perform the git rebase command to apply changes from one branch onto another branch in the command line, and then compare the experience in GitKraken.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pbm mbs pts" id="advanced" style="background-color: #311628">
+<div class="ptz container">
+<div class="narrow center">
+<span id="rebase-part-two"></span>
+<h1 class="cream ptxs pbxs mts">Advanced Git Tutorials</h1>
+<div id="what-is-a-merge-conflict" class="anchor"></div>
+<div class="flex-grid video-grid mtm">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/how-to-resolve-merge-conflict-in-git">
+<div class="red-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/advanced/merge-conflict.jpg" alt="Learning Git with GitKraken - Merge Conflict thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>How to Resolve a Merge Conflict in Git</strong></p>
+<p class="mts">What is a merge conflict? How do you resolve merge conflicts in Git? Learn when a merge conflict in Git will occur and how to resolve them.</p>
+<span id="git-lfs"></span>
+</div>
+</div>
+<div id="what-is-git-lfs" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/what-is-git-lfs">
+<div class="red-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/advanced/lfs.jpg" alt="Learning Git with GitKraken - What is Git LFS thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>What is Git LFS?</strong></p>
+<span id="submodule"></span>
+<p class="mts">What is Git LFS? How do you install Git LFS? Learn how to use Git LFS to save space in your remote repository when working with binary files in Git.</p>
+</div>
+</div>
+<div id="what-is-a-submodule" class="anchor"></div>
+<hr>
+<div class="flex-grid video-grid">
+<div class="flex-item video-item">
+<a href="/learn/git/tutorials/git-submodule-how-to">
+<div class="red-border">
+<i class="fa fa-play" aria-hidden="true"></i>
+<img src="/img/landing-page/tutorials/advanced/submodule.jpg" alt="Learning Git with GitKraken - What is a Submodule thumbnail">
+</div>
+</a>
+</div>
+<div class="flex-item video-summary ptz mtz">
+<p><strong>What is a Git Submodule?</strong></p>
+<p class="mts">How do you work with Git submodules? How do you add a Git submodule? Learn how to add a Git submodule and how to pull changes to your main project.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<section class="footer-cta-learn">
+<div class="narrow-plus">
+<div class="flex-grid">
+<div class="flex-item">
+<h3 class="cream center">Simplify Git with GitKraken!</h3>
+<p class="cream center mtz pbm">Legendary Git GUI for Windows, Mac & Linux</p>
+<div class="dl-container center">
+<noscript>
+<a href="/download" class="button os button--basic all">
+Download GitKraken
+<span class="button__subtext">Windows / Mac / Linux</span>
+</a>
+</noscript>
+</div>
+</div>
+<div class="flex-item">
+<div class="img-container">
+<img src="/img/index/gk-product-2.png" alt="GitKraken Git GUI screenshot">
+</div>
+</div>
+</div>
+</div>
+</section></div>
+<footer class="site-footer">
+<div class="container">
+<ul>
+<li><a class="footer-link" href="https://support.gitkraken.com/" target="_blank" rel="noopener">Support</a></li>
+<li><a class="footer-link" href="https://support.gitkraken.com/release-notes/current" target="_blank" rel="noopener">Release Notes</a></li>
+<li><a class="footer-link" href="/contact">Contact</a></li>
+<li><a class="footer-link" href="/privacy">Privacy</a></li>
+</ul>
+<ul>
+<li><a href="/about" class="header-link">About</a></li>
+<li><a class="footer-link" href="/careers">Careers</a></li>
+<li><a class="footer-link" href="https://blog.axosoft.com/" target="_blank" rel="noopener">Blog</a></li>
+<li><a class="footer-link" href="/learn/git">Learn Git</a></li>
+<li><a class="footer-link" href="/store">Store</a></li>
+<li><a class="footer-link" href="/keif-gallery">Keif Gallery</a></li>
+</ul>
+<p class="site-footer__copyright">&copy; 2021 Axosoft, LLC. &nbsp;Made with <i class="fa fa-heart"></i> in Scottsdale, Arizona.</p>
+</div>
+</footer>
+<script type="text/plain" data-cookieconsent="marketing">
+!function(e,n,u,a){e.twq||(a=e.twq=function(){a.exe?a.exe.apply(a,arguments):
+    a.queue.push(arguments);},a.version='1',a.queue=[],t=n.createElement(u),
+    t.async=!0,t.src='//static.ads-twitter.com/uwt.js',s=n.getElementsByTagName(u)[0],
+    s.parentNode.insertBefore(t,s))}(window,document,'script');
+    // Insert Twitter Pixel ID and Standard Event data below
+    twq('init','nv5zb');
+    twq('track','PageView');
+</script>
+<script type="text/javascript" id="hs-script-loader" async defer="defer" src="//js.hs-scripts.com/544893.js"></script>
+<script>!function(t,e){e=t.createElement("script"),e.src="/js/main.js?v=20210519",e.setAttribute("async","true"),t.body.appendChild(e)}(document)</script>
+</body>
+</html>
